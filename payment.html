@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment - United Welfare Organization (UWO)</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            background: #f6f9fc;
+            color: #333;
+        }
+
+        /* Navigation */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #005b96;
+            padding: 15px 40px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        nav .logo {
+            color: white;
+            font-weight: bold;
+            font-size: 1.3em;
+            letter-spacing: 1px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #ffd700;
+        }
+
+        /* Header */
+        header {
+            text-align: center;
+            background: #007acc;
+            color: white;
+            padding: 60px 20px;
+        }
+
+        header h1 {
+            font-size: 2.2em;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.1em;
+            opacity: 0.95;
+            margin-top: 5px;
+        }
+
+        /* Payment Section */
+        section {
+            max-width: 600px;
+            margin: 50px auto;
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.05);
+        }
+
+        h2 {
+            color: #005b96;
+            border-left: 5px solid #007acc;
+            padding-left: 10px;
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            font-weight: 500;
+            margin-top: 15px;
+        }
+
+        input,
+        select,
+        button {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            margin-top: 5px;
+            font-size: 1em;
+        }
+
+        button {
+            background-color: #005b96;
+            color: white;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+            margin-top: 25px;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background-color: #007acc;
+        }
+
+        #messageBox {
+            margin-top: 20px;
+            font-weight: bold;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .treasurer-info {
+            margin-top: 40px;
+            background: #e6f2ff;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .treasurer-info h3 {
+            color: #005b96;
+            margin-bottom: 10px;
+        }
+
+        .treasurer-info p {
+            margin: 5px 0;
+        }
+
+        footer {
+            background: #005b96;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9em;
+            margin-top: 60px;
+        }
+
+        @media (max-width: 600px) {
+            section {
+                padding: 25px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="logo">UWO</div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="application.html">Application</a></li>
+            <li><a href="helpcenter.html">Help Center</a></li>
+            <li><a href="payment.html" style="color:#ffd700;">Payment</a></li>
+        </ul>
+    </nav>
+
+    <header>
+        <h1>Make a Payment</h1>
+        <p>Secure and Easy Contributions to United Welfare Organization</p>
+    </header>
+
+    <section>
+        <h2>Payment Form</h2>
+        <form id="paymentForm">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" placeholder="Enter your name" required>
+
+            <label for="number">Phone Number</label>
+            <input type="tel" id="number" placeholder="07XXXXXXXX" required>
+
+            <label for="amount">Amount (Ksh)</label>
+            <input type="number" id="amount" placeholder="Enter amount" required>
+
+            <label for="treasurer">Select Treasurer</label>
+            <select id="treasurer" required>
+                <option value="">-- Choose Treasurer --</option>
+                <option value="General Treasurer (Sofia Kiulu)">General Treasurer (Sofia Kiulu)</option>
+                <option value="Chama Treasurer (Delphina Gikundi)">Chama Treasurer (Delphina Gikundi)</option>
+            </select>
+
+            <button type="submit">Submit Payment</button>
+            <p id="messageBox"></p>
+        </form>
+
+        <div class="treasurer-info">
+            <h3>📋 Treasurer Contacts</h3>
+            <p><strong>General Treasurer:</strong> Sofia Kiulu — 0743719533</p>
+            <p><strong>Chama Treasurer:</strong> Delphina Gikundi — 0794784497</p>
+        </div>
+    </section>
+
+    <footer>
+        &copy; 2025 United Welfare Organization (UWO). All Rights Reserved.
+    </footer>
+
+    <script>
+        document.getElementById("paymentForm").addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            const name = document.getElementById("name").value.trim();
+            const number = document.getElementById("number").value.trim();
+            const amount = document.getElementById("amount").value.trim();
+            const treasurer = document.getElementById("treasurer").value;
+            const messageBox = document.getElementById("messageBox");
+
+            if (!number || !amount || !treasurer) {
+                messageBox.style.color = "red";
+                messageBox.textContent = "⚠️ Please fill in all payment details.";
+                return;
+            }
+
+            messageBox.style.color = "#007acc";
+            messageBox.textContent = "⏳ Processing your payment details...";
+
+            setTimeout(() => {
+                messageBox.style.color = "green";
+                messageBox.textContent = `✅ Thanks ${name || "Member"} for paying Ksh ${amount} to United Welfare Organization via ${treasurer}.`;
+            }, 2000);
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Application - United Welfare Organization (UWO)</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            background: #f6f9fc;
+            color: #333;
+        }
+
+        /* Navigation */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #005b96;
+            padding: 15px 40px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        nav .logo {
+            color: white;
+            font-weight: bold;
+            font-size: 1.3em;
+            letter-spacing: 1px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #ffd700;
+        }
+
+        /* Header */
+        header {
+            text-align: center;
+            background: #007acc;
+            color: white;
+            padding: 60px 20px;
+        }
+
+        header h1 {
+            font-size: 2.2em;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.1em;
+            opacity: 0.95;
+            margin-top: 5px;
+        }
+
+        /* Form Section */
+        section {
+            max-width: 600px;
+            margin: 50px auto;
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.05);
+        }
+
+        h2 {
+            color: #005b96;
+            border-left: 5px solid #007acc;
+            padding-left: 10px;
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            font-weight: 500;
+            margin-top: 15px;
+        }
+
+        input,
+        button {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            margin-top: 5px;
+            font-size: 1em;
+        }
+
+        button {
+            background-color: #005b96;
+            color: white;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+            margin-top: 25px;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background-color: #007acc;
+        }
+
+        #messageBox {
+            margin-top: 20px;
+            font-weight: bold;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .secretary-box {
+            margin-top: 40px;
+            background: #e6f2ff;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .secretary-box h3 {
+            color: #005b96;
+            margin-bottom: 10px;
+        }
+
+        .secretary-box p {
+            margin: 5px 0;
+            line-height: 1.6;
+        }
+
+        footer {
+            background: #005b96;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9em;
+            margin-top: 60px;
+        }
+
+        @media (max-width: 600px) {
+            section {
+                padding: 25px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="logo">UWO</div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="application.html" style="color:#ffd700;">Application</a></li>
+            <li><a href="helpcenter.html">Help Center</a></li>
+            <li><a href="payment.html">Payment</a></li>
+        </ul>
+    </nav>
+
+    <header>
+        <h1>Membership Application</h1>
+        <p>Join United Welfare Organization and be part of positive community change</p>
+    </header>
+
+    <section>
+        <h2>Apply to Join</h2>
+        <form id="applicationForm">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" placeholder="Enter your name" required>
+
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" placeholder="07XXXXXXXX" required>
+
+            <button type="submit">Submit Application</button>
+            <p id="messageBox"></p>
+        </form>
+
+        <div class="secretary-box">
+            <h3>📞 Application Requests Go Through Secretary</h3>
+            <p><strong>Name:</strong> Jonah Kabira</p>
+            <p><strong>Position:</strong> Secretary General</p>
+            <p><strong>Phone:</strong> 0748400797 (Call or WhatsApp)</p>
+            <p>All membership applications are reviewed and approved through the Secretary.
+                For any assistance or confirmation, kindly contact Jonah directly via WhatsApp.</p>
+        </div>
+    </section>
+
+    <footer>
+        &copy; 2025 United Welfare Organization (UWO). All Rights Reserved.
+    </footer>
+
+    <script>
+        document.getElementById("applicationForm").addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            const name = document.getElementById("name").value.trim();
+            const phone = document.getElementById("phone").value.trim();
+            const messageBox = document.getElementById("messageBox");
+
+            if (!name || !phone) {
+                messageBox.style.color = "red";
+                messageBox.textContent = "⚠️ Please fill all required fields.";
+                return;
+            }
+
+            messageBox.style.color = "#007acc";
+            messageBox.textContent = "⏳ Submitting your application...";
+
+            setTimeout(() => {
+                messageBox.style.color = "green";
+                messageBox.textContent = `✅ Thank you ${name}! Your application has been received. The Secretary (Jonah Kabira) will contact you soon via WhatsApp.`;
+                document.getElementById("applicationForm").reset();
+            }, 2000);
+        });
+    </script>
+</body>
+
+</html>

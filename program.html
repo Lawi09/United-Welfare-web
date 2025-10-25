@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programs - United Welfare Organization (UWO)</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            background: #f6f9fc;
+            color: #333;
+        }
+
+        /* Navigation */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #005b96;
+            padding: 15px 40px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        nav .logo {
+            color: white;
+            font-weight: bold;
+            font-size: 1.3em;
+            letter-spacing: 1px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #ffd700;
+        }
+
+        /* Header */
+        header {
+            text-align: center;
+            background: #007acc;
+            color: white;
+            padding: 60px 20px;
+        }
+
+        header h1 {
+            font-size: 2.4em;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.1em;
+            opacity: 0.95;
+        }
+
+        /* Program Cards */
+        .programs {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            max-width: 1100px;
+            margin: 50px auto;
+            padding: 0 20px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            padding: 20px;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
+        }
+
+        .card h3 {
+            color: #005b96;
+            margin-top: 0;
+        }
+
+        .card p {
+            line-height: 1.6;
+        }
+
+        /* Chama Section */
+        .chama-section {
+            background: #e6f2ff;
+            padding: 40px 20px;
+            border-radius: 15px;
+            max-width: 900px;
+            margin: 50px auto;
+            text-align: center;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.05);
+        }
+
+        .chama-section h2 {
+            color: #005b96;
+            margin-bottom: 10px;
+        }
+
+        .chama-section p {
+            font-size: 1.05em;
+            margin: 10px 0;
+            line-height: 1.6;
+        }
+
+        /* Other Programs */
+        .other-programs {
+            background: #ffffff;
+            padding: 40px 20px;
+            border-radius: 15px;
+            max-width: 900px;
+            margin: 50px auto;
+            text-align: center;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.05);
+        }
+
+        .other-programs h2 {
+            color: #005b96;
+            margin-bottom: 15px;
+        }
+
+        .other-programs p {
+            font-size: 1.05em;
+            line-height: 1.6;
+        }
+
+        footer {
+            background: #005b96;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9em;
+            margin-top: 60px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="logo">UWO</div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="program.html" style="color:#ffd700;">Programs</a></li>
+            <li><a href="application.html">Application</a></li>
+            <li><a href="payment.html">Payment</a></li>
+            <li><a href="helpcenter.html">Help Center</a></li>
+        </ul>
+    </nav>
+
+    <header>
+        <h1>Our Programs</h1>
+        <p>Empowering Communities, Changing Lives</p>
+    </header>
+
+    <section class="programs">
+        <div class="card">
+            <h3>1. Community Development and Engagement Program</h3>
+            <p>We focus on empowering communities through education, mentorship, and collective action to address local
+                challenges, enhance leadership, and promote unity among members.</p>
+        </div>
+
+        <div class="card">
+            <h3>2. Youth Empowerment & Skills Development Program</h3>
+            <p>This program equips young people with technical and entrepreneurial skills, fostering innovation, digital
+                literacy, and self-reliance to prepare them for future opportunities.</p>
+        </div>
+
+        <div class="card">
+            <h3>3. Community Health and Hygiene Program</h3>
+            <p>We promote hygiene awareness, environmental cleanliness, and access to health education to improve
+                well-being within the community.</p>
+        </div>
+
+        <div class="card">
+            <h3>4. Chama & Credit Programs</h3>
+            <p>Members save collectively and access affordable loans to support personal and business growth,
+                encouraging financial discipline and shared prosperity.</p>
+        </div>
+    </section>
+
+    <section class="chama-section">
+        <h2>💰 Join Our Chama Savings Program</h2>
+        <p>Interested in joining our Chama or Credit Program?</p>
+        <p>Contact our Chama Secretary for registration and details:</p>
+        <p><strong>Name:</strong> Lyne Kathambi</p>
+        <p><strong>Phone:</strong> 0741983109 (Call or WhatsApp)</p>
+    </section>
+
+    <section class="other-programs">
+        <h2>📞 Other Programs & Inquiries</h2>
+        <p>For inquiries or detailed information about our programs, contact:</p>
+        <p><strong>Name:</strong> Jonah Kabira</p>
+        <p><strong>Role:</strong> Secretary General</p>
+        <p><strong>Phone:</strong> 0748400797 (Call or WhatsApp)</p>
+    </section>
+
+    <footer>
+        &copy; 2025 United Welfare Organization (UWO). All Rights Reserved.
+    </footer>
+</body>
+
+</html>

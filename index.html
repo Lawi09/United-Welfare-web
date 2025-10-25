@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UNITED WELFARE ORGANIZATION</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f6f9fc;
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        /* Header with Menu Button */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #005b96;
+            padding: 15px 25px;
+            color: white;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo {
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+
+        .menu-icon {
+            font-size: 1.8em;
+            cursor: pointer;
+        }
+
+        /* Sidebar Menu */
+        .sidebar {
+            position: fixed;
+            top: 0;
+            left: -260px;
+            width: 250px;
+            height: 100%;
+            background-color: #005b96;
+            color: white;
+            padding-top: 60px;
+            transition: left 0.4s ease;
+            box-shadow: 2px 0 8px rgba(0, 0, 0, 0.2);
+            z-index: 100;
+        }
+
+        .sidebar.active {
+            left: 0;
+        }
+
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .sidebar ul li {
+            padding: 15px 20px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .sidebar ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.1em;
+            display: block;
+            transition: background 0.3s;
+        }
+
+        .sidebar ul li a:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        /* Overlay for mobile view */
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.4);
+            z-index: 99;
+        }
+
+        .overlay.active {
+            display: block;
+        }
+
+        /* Title Section */
+        .title-section {
+            text-align: center;
+            padding: 60px 20px 30px;
+            background-color: #007acc;
+            color: white;
+        }
+
+        .title-section h1 {
+            font-size: 2.5em;
+            margin: 0;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        /* Slogan Section with Animation */
+        .slogan-section {
+            text-align: center;
+            color: white;
+            padding: 80px 20px;
+            font-size: 1.4em;
+            font-weight: 600;
+            background: linear-gradient(270deg, #007acc, #00b4d8, #0094d8, #007acc);
+            background-size: 800% 800%;
+            animation: gradientMove 10s ease infinite;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #ffd700;
+            color: #005b96;
+            padding: 12px 25px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background 0.3s, transform 0.3s;
+            margin-top: 20px;
+        }
+
+        .btn:hover {
+            background: #ffcc00;
+            transform: translateY(-3px);
+        }
+
+        /* Features Section */
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 30px;
+            max-width: 1000px;
+            margin: 60px auto;
+            padding: 0 20px;
+        }
+
+        .feature {
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .feature:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
+        }
+
+        .feature h3 {
+            color: #005b96;
+            margin-top: 0;
+        }
+
+        .feature p {
+            line-height: 1.6;
+        }
+
+        /* Footer */
+        footer {
+            background: #005b96;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 60px;
+            font-size: 0.9em;
+        }
+
+        /* Keyframe Animations */
+        @keyframes gradientMove {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">United Welfare Organization</div>
+        <div class="menu-icon" onclick="toggleMenu()">☰</div>
+    </header>
+
+    <!-- Sidebar Menu -->
+    <div class="sidebar" id="sidebar">
+        <ul>
+            <li><a href="index.html">🏠 Home</a></li>
+            <li><a href="about.html">ℹ️ About</a></li>
+            <li><a href="program.html">📋 Programs</a></li>
+            <li><a href="application.html">📝 Application</a></li>
+            <li><a href="payment.html">💳 Payment</a></li>
+            <li><a href="helpcenter.html">🆘 Help Center</a></li>
+        </ul>
+    </div>
+
+    <div class="overlay" id="overlay" onclick="toggleMenu()"></div>
+
+    <!-- Title Section -->
+    <section class="title-section">
+        <h1>UNITED WELFARE ORGANIZATION</h1>
+    </section>
+
+    <!-- Slogan Section -->
+    <section class="slogan-section">
+        <p>Empowering Communities, Changing Lives 🌍</p>
+        <a href="program.html" class="btn">Explore Our Programs</a>
+    </section>
+
+    <!-- Features -->
+    <section class="features">
+        <div class="feature">
+            <h3>About Us</h3>
+            <p>Learn more about our mission, leadership, and community impact. We work together to improve lives through
+                unity, empowerment, and social welfare.</p>
+            <a href="about.html" class="btn">Read More</a>
+        </div>
+
+        <div class="feature">
+            <h3>Programs</h3>
+            <p>Discover our initiatives such as Youth Empowerment, Chama & Credit, Health, and Community Development
+                programs.</p>
+            <a href="program.html" class="btn">View Programs</a>
+        </div>
+
+        <div class="feature">
+            <h3>Join Our Organization</h3>
+            <p>Become part of our community. Apply for membership and help make a difference in your society today.</p>
+            <a href="application.html" class="btn">Apply Now</a>
+        </div>
+
+        <div class="feature">
+            <h3>Make a Payment</h3>
+            <p>Support our mission or pay your contributions securely via M-Pesa to our Treasurer numbers.</p>
+            <a href="payment.html" class="btn">Go to Payment</a>
+        </div>
+
+        <div class="feature">
+            <h3>Help Center</h3>
+            <p>Need assistance? Contact our support team for inquiries, challenges, or guidance on our services.</p>
+            <a href="helpcenter.html" class="btn">Get Help</a>
+        </div>
+    </section>
+
+    <footer>
+        &copy; 2025 United Welfare Organization. All Rights Reserved.
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const sidebar = document.getElementById('sidebar');
+            const overlay = document.getElementById('overlay');
+            sidebar.classList.toggle('active');
+            overlay.classList.toggle('active');
+        }
+    </script>
+</body>
+
+</html>

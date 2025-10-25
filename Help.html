@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Help Center - United Welfare Organization (UWO)</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f6f9fc;
+            color: #333;
+        }
+
+        /* Navigation */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #005b96;
+            padding: 15px 40px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        nav .logo {
+            color: white;
+            font-weight: bold;
+            font-size: 1.3em;
+            letter-spacing: 1px;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 25px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #ffd700;
+        }
+
+        /* Header */
+        header {
+            text-align: center;
+            background: #007acc;
+            color: white;
+            padding: 60px 20px 80px;
+            position: relative;
+        }
+
+        header h1 {
+            font-size: 2.2em;
+            margin-bottom: 15px;
+        }
+
+        header p {
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+
+        /* Search Box */
+        .search-box {
+            position: absolute;
+            bottom: -25px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80%;
+            max-width: 600px;
+            display: flex;
+            background: white;
+            border-radius: 50px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .search-box input {
+            flex: 1;
+            border: none;
+            outline: none;
+            padding: 15px 20px;
+            border-radius: 50px 0 0 50px;
+            font-size: 1em;
+        }
+
+        .search-box button {
+            background: #005b96;
+            border: none;
+            color: white;
+            padding: 15px 25px;
+            border-radius: 0 50px 50px 0;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .search-box button:hover {
+            background: #004d80;
+        }
+
+        /* Main Section */
+        main {
+            max-width: 900px;
+            margin: 80px auto;
+            padding: 0 20px;
+        }
+
+        h2 {
+            color: #005b96;
+            margin-top: 40px;
+            border-left: 5px solid #007acc;
+            padding-left: 10px;
+        }
+
+        .faq {
+            background: white;
+            margin-top: 20px;
+            padding: 20px 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+        }
+
+        .faq h3 {
+            color: #007acc;
+            margin-bottom: 10px;
+        }
+
+        .faq p {
+            margin: 0;
+            color: #555;
+        }
+
+        /* Contact Boxes */
+        .contact-support {
+            background: #e6f2ff;
+            padding: 30px;
+            border-radius: 12px;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .contact-support h3 {
+            color: #005b96;
+            margin-bottom: 15px;
+        }
+
+        .contact-box {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+            padding: 25px;
+            margin: 20px auto;
+            text-align: left;
+            max-width: 600px;
+        }
+
+        .contact-box h4 {
+            color: #007acc;
+            margin-bottom: 8px;
+        }
+
+        .contact-box p {
+            margin: 5px 0;
+            font-size: 0.95em;
+        }
+
+        .contact-box a {
+            color: #005b96;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .contact-box a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #005b96;
+            color: white;
+            font-size: 0.9em;
+            margin-top: 60px;
+        }
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 1.7em;
+            }
+
+            .search-box {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="logo">UWO</div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="application.html">Application</a></li>
+            <li><a href="helpcenter.html" style="color:#ffd700;">Help Center</a></li>
+            <li><a href="payment.html">Payment</a></li>
+        </ul>
+    </nav>
+
+    <header>
+        <h1>Help Center</h1>
+        <p>Find answers, guidance, and support for all your UWO services.</p>
+
+        <div class="search-box">
+            <input type="text" placeholder="Search for help or topics...">
+            <button>Search</button>
+        </div>
+    </header>
+
+    <main>
+        <h2>Frequently Asked Questions (FAQs)</h2>
+
+        <div class="faq">
+            <h3>1. How can I become a member of UWO?</h3>
+            <p>You can join by filling out the membership form on our <a href="application.html">Application page</a>
+                and submitting it for approval.</p>
+        </div>
+
+        <div class="faq">
+            <h3>2. How do I make payments or contributions?</h3>
+            <p>Payments are made through our <a href="payment.html">Payment page</a> using M-Pesa. You’ll receive a
+                confirmation and our treasurer will be notified automatically.</p>
+        </div>
+
+        <div class="faq">
+            <h3>3. What is the UWO Chama?</h3>
+            <p>It’s our community savings and welfare group where members contribute regularly, access soft loans, and
+                receive support during emergencies or development projects.</p>
+        </div>
+
+        <div class="faq">
+            <h3>4. How can I get assistance or report an issue?</h3>
+            <p>You can reach us directly through the contacts provided below for organization or software-related
+                support.</p>
+        </div>
+
+        <div class="contact-support">
+            <h3>Contact Our Support Team</h3>
+            <p>Choose the right contact depending on your issue.</p>
+
+            <div class="contact-box">
+                <h4>Organization & Membership Challenges</h4>
+                <p><strong>Name:</strong> Jonah Kabira Kobia</p>
+                <p><strong>Role:</strong> Secretary General</p>
+                <p><strong>Phone:</strong> <a href="tel:+254748400797">0748 400 797</a> (Call or WhatsApp)</p>
+            </div>
+
+            <div class="contact-box">
+                <h4>Software or Website Challenges</h4>
+                <p><strong>Name:</strong> Lawi Muriki</p>
+                <p><strong>Role:</strong> Web Developer</p>
+                <p><strong>Phone:</strong> <a href="tel:+254759240427">0759 240 427</a> (Call or WhatsApp)</p>
+                <p><strong>Email:</strong> <a href="mailto:lawimuriki84@gmail.com">lawimuriki84@gmail.com</a></p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        &copy; 2025 United Welfare Organization (UWO). All Rights Reserved.
+    </footer>
+</body>
+
+</html>
